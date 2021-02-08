@@ -1,0 +1,201 @@
+main {
+  background: #6183A6;
+  background-image: linear-gradient(#E0EEEE, #6183A6);
+  margin: 10px 20px 0px 20px;
+  font-family: Noto Sans, sans-serif;
+  font-size: 20px;
+  text-align: center;
+}
+
+form {
+  background: #FAFAFA;
+  margin: 10px 25% 20px 25%;
+  padding: 20px 25px 20px 40px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  font-size: 18px;
+  text-align: left;
+}
+
+p {
+  margin-left: 3px;
+  font-size: 18px;
+}
+
+label {
+  margin-left: 3px;
+  font-size: 15px;
+}
+
+input {
+  position: relative;
+  margin-left: 10px;
+}
+
+select {
+  margin-left: 10px;
+  border-style: none none solid none;
+  border-width: 2px;
+  border-color: #0099CC;
+  font-size: 15px;
+  font-family: Noto Sans, sans-serif;
+}
+
+textarea {
+  width: 600px;
+  height: 54px;
+  margin: 0px 20px 40px 10px;
+  padding-left: 5px;
+  border-style: none none solid none;
+  border-width: 2px;
+  border-color: #0099CC;
+  font-size: 15px;
+  font-family: Noto Sans, sans-serif;
+}
+
+footer {
+  background: #ECECEC;
+  color: #4A777A;
+  font-family: Noto Sans, sans-serif;
+  text-align: center;
+  margin: 0px 20px 10px 20px;
+  padding: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 220px 220px 220px 220px;
+  grid-template-rows: 1fr 1fr autofill;
+}
+
+.grid-p {
+  grid-column: 1 / 5;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  display: block;
+  position: relative;
+  padding: 0 0 0 35px;
+  margin: 0 0 10px 0;
+}
+
+.container input {
+  position: absolute;
+  opacity: 0; /* make input invisible*/
+  cursor: pointer;
+}
+
+.container:hover input ~ .radios {
+  background-color: #CCC;
+}
+
+.container input:checked ~ .radios {
+  background-color: #0099CC;
+}
+
+.container input:checked ~ .radios:after {
+  display: block;
+}
+
+.container .radios:after {
+  top: 6px;  left: 6px;  width: 8px;  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+
+.container:hover input ~ .checks {
+  background-color: #CCC;
+}
+
+.container input:checked ~ .checks {
+  background-color: #0099CC;
+}
+
+.container input:checked ~ .checks:after {
+  display: block;
+}
+
+.container .checks:after {
+  top: 2px;  left: 6px;  width: 5px;  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+.textBoxInput {
+  width: 500px;
+  height: 25px;
+  padding-left: 5px;
+  border-style: none none solid none;
+  border-width: 2px;
+  border-color: #0099CC;
+  font-size: 15px;
+}
+
+.textBoxInput:focus:hover {
+  border-color: #D1EEEE;
+}
+
+.button-input {
+  opacity: 0;
+  cursor: pointer;
+}
+
+.radios {
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  left: 10px;
+  border-radius: 50%;
+  background-color: #EEE;
+  cursor: pointer;
+}
+
+.radios:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checks {
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  left: 10px;
+  background-color: #EEE;
+  cursor: pointer;
+}
+
+.checks:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+#title {
+  color: #05B8CC;
+  padding: 50px 0px 0px 0px;
+  font-size: 45px;
+  text-align: center;
+}
+
+#description {
+  padding: 0px 100px 0px 100px;
+}
+
+#submit {
+  background: #EEE;
+  color: #325C74;
+  font-size: 25px;
+  padding: 5px 15px 5px 15px;
+  border-radius: 10px;
+}
+
+#submit:hover {
+  background: #F0FFFF;
+  cursor: pointer;
+}
